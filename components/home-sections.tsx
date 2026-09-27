@@ -1,0 +1,4 @@
+import {Button} from './site-chrome';
+export function Eyebrow({children}:{children:React.ReactNode}){return <p className="eyebrow">{children}</p>}
+export function Division({kind,title,copy,items,href}:{kind:string;title:React.ReactNode;copy:string;items:string[];href:string}){return <section className={`division ${kind}`}><div><Eyebrow>01 / {kind.toUpperCase()}</Eyebrow><h2>{title}</h2><p className="lede">{copy}</p><Button href={href}>ENTER LUMAROZ {kind.toUpperCase()}</Button></div><ul>{items.map((item,i)=><li key={item}><span>0{i+1}</span>{item}</li>)}</ul></section>}
+export function SectionTitle({label,title,copy}:{label:string;title:React.ReactNode;copy?:string}){return <div className="section-title"><Eyebrow>{label}</Eyebrow><h2>{title}</h2>{copy&&<p className="lede">{copy}</p>}</div>}

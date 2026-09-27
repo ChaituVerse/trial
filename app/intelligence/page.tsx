@@ -1,0 +1,1 @@
+import {DivisionPage} from '@/components/division-page'; export default function Page(){return <DivisionPage type="intelligence"/>}
